@@ -43,7 +43,11 @@ class WebSocket:
     def __flag(self, conn, addr):
         print(f"[INCOMING] {addr}")
         while True:
-            msg = conn.recv(self.__buffer)
+            try:
+                msg = conn.recv(self.__buffer)
+            except socket.error():
+                print(f"[STATUS] Error occurred during handling adress: {addr}")
+                break
             msg = msg.decode()
             print(msg)
             if msg == "!DISCONNECT":

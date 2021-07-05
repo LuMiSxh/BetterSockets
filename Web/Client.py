@@ -29,11 +29,12 @@ class WebSocket:
     def send(self, data) -> send:
         self.__Socket.send(f"{data}".encode())
 
-        rec = self.__Socket.recv(self.__buffer)
-        rec = rec.decode()
-        print(rec)
-
         if self.__Function:
+
+            rec = self.__Socket.recv(self.__buffer)
+            rec = rec.decode()
+            print(rec)
+
             self.__Function(rec)
 
     def reconnect(self) -> WebSocket:
