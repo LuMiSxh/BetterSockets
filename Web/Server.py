@@ -46,7 +46,7 @@ class WebSocket:
             try:
                 msg = conn.recv(self.__buffer)
             except socket.error():
-                print(f"[STATUS] Error occurred during handling adress: {addr}")
+                print(f"[STATUS] Error occurred during handling address: {addr}")
                 break
             msg = msg.decode()
             print(msg)
