@@ -60,5 +60,4 @@ class WebSocket:
 
 
 Server = WebSocket()
-print(Server.__doc__)
 Server.listen()
