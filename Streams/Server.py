@@ -13,6 +13,9 @@ class Server:
         self.__func = kwargs.get("func", None)
         self.__Server = None
 
+    __author__ = "Luca Michael Schmidt"
+    __version__ = "0.0.1a"
+
     def listen(self):
         asyncio.run(self.__listeningPrep())
 

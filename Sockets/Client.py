@@ -44,11 +44,5 @@ class WebSocket:
         self.__Socket.connect((self.__Host, self.__port))
 
 
-Client = WebSocket()
-
-while True:
-    inp = input("What do you want to send:\n")
-    if inp == "re":
-        Client.reconnect()
-    else:
-        Client.send(inp)
+# Client = WebSocket()
+# Client.send("Test")

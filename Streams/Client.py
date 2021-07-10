@@ -9,6 +9,9 @@ class WebSocket:
         self.__Reader, self.__Writer = None, None
         self.__func = kwargs.get("func", None)
 
+    __author__ = "Luca Michael Schmidt"
+    __version__ = "0.0.1a"
+
 
     def send(self, data):
         asyncio.run(self.__send(data))
