@@ -4,6 +4,8 @@ import socket
 
 class WebSocket:
     def __init__(self, **kwargs) -> WebSocket:
+        self.__debug: bool = kwargs.get("debug", False)
+
         self.__port = int(kwargs.get("port", 5555))
         self.__Host = socket.gethostbyname(socket.gethostname())
         self.__buffer = int(kwargs.get("buffer", 1024))
@@ -11,16 +13,12 @@ class WebSocket:
         self.__Function = kwargs.get("func", None)
 
         self.__Socket = socket.socket()
+        self.__debugPr(f"Opening connection on: {(self.__Host, self.__port)}")
         self.__Socket.connect((self.__Host, self.__port))
 
-    __author__ = "Luca Michael Schmidt"
-    __version__ = "0.0.1a"
-    __doc__ = \
-        """
-        This is a WebSocket class, specified for Client use. Buffer size and Port can be specified as keyword arguments.
-        To process the received data, just put a function with one argument ONLY (data) in the constructor WebSocket(func=function)
-        -> Client works perfectly fine in sending and receiving without modification
-        """
+    def __debugPr(self, Input: str):
+        if self.__debug is True:
+            print(f"[DEBUG] :: {Input}")
 
     def __del__(self):
         self.__Socket.send("!DISCONNECT".encode())
@@ -28,18 +26,19 @@ class WebSocket:
 
     def send(self, data) -> send:
         self.__Socket.send(f"{data}".encode())
+        self.__debugPr(f"Send message '{data}' to connection")
 
         if self.__Function:
 
             rec = self.__Socket.recv(self.__buffer)
             rec = rec.decode()
-            print(rec)
 
             self.__Function(rec)
 
     def reconnect(self) -> WebSocket:
         self.__Socket.send("!DISCONNECT".encode())
         self.__Socket.close()
+        self.__debugPr(f"Reconnecting Socket")
         self.__Socket = socket.socket()
         self.__Socket.connect((self.__Host, self.__port))
 
