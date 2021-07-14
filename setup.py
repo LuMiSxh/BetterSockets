@@ -21,5 +21,5 @@ setup(
     author_email="schmidt.lucamichael@gmail.com",
     license="MIT",
     classifiers=classifiers,
-    packages=find_packages()
+    packages=find_packages(include=["BetterSockets", "BetterSockets.Asyncio.*", "BetterSockets.Threads.*", "BetterSockets.*"])
 )
