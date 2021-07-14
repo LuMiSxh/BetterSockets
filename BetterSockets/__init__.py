@@ -5,5 +5,5 @@ from .Server.Processor import ProcessorServer
 
 # Version, Author
 
-__version__ = "0.0.1a0"
+__version__ = "0.0.1a1"
 __author__ = "Luca Michael Schmidt"
