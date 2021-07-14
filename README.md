@@ -21,5 +21,5 @@ For the client to send data, you need to call the `send()` function, just put th
 #
 ## Changelog
 ####
-**0.0.1a (14.07.2021)**
+**0.0.1a0 (14.07.2021)**
 - Release of this package

@@ -11,14 +11,14 @@ classifiers = \
 
 setup(
     name="BetterSockets",
-    version="0.0.1a",
+    version="0.0.1a0",
     description="Better Python sockets and asyncio streams",
     long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     url="https://github.com/Drageast/BetterSockets",
     author="Luca Michael Schmidt",
     author_email="schmidt.lucamichael@gmail.com",
     license="MIT",
     classifiers=classifiers,
-    kewords="sockets",
     packages=find_packages()
 )
