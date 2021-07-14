@@ -21,5 +21,7 @@ setup(
     author_email="schmidt.lucamichael@gmail.com",
     license="MIT",
     classifiers=classifiers,
-    packages=find_packages(include=["BetterSockets", "BetterSockets.Asyncio.*", "BetterSockets.Threads.*", "BetterSockets.*"])
+    package_dir={"": "BetterSockets"},
+    packages=find_packages(where="BetterSockets"),
+    python_requires=">=3.6"
 )

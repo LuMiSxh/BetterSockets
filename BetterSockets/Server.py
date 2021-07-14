@@ -36,4 +36,3 @@ class HubServer:
 
     def listen(self):
         self.__Socket.listen()
-

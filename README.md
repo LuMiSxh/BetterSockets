@@ -22,6 +22,10 @@ For the client to send data, you need to call the `send()` function, just put th
 ## Changelog
 ####
 **0.0.1a.4 (14.07.2021)**
+- Fixed bugs within the setup.py
+- Added a restriction to usable Python versions
+####
+**0.0.1a.4 (14.07.2021)**
 - Fixed a bug within the setup.py
 ####
 **0.0.1a.3 (14.07.2021)**
