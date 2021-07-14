@@ -21,6 +21,9 @@ For the client to send data, you need to call the `send()` function, just put th
 #
 ## Changelog
 ####
+**0.0.1a.2 (14.07.2021)**
+- Bug fixes for __init__.py and package structure
+####
 **0.0.1a1 (14.07.2021)**
 - Bug fix for BetterSockets.Client() not working
 #####

@@ -1,9 +1,8 @@
-from .Client.Client import Client
-from .Server.Hub import HubServer
-from .Server.Processor import ProcessorServer
-
-
 # Version, Author
-
 __version__ = "0.0.1a1"
 __author__ = "Luca Michael Schmidt"
+__license__ = "MIT"
+
+# importing of the classes
+from .Client import Client
+from .Server import HubServer, ProcessorServer
