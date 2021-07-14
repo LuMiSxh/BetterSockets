@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+from BetterSockets import __version__
 
 classifiers = \
     [
@@ -11,7 +12,7 @@ classifiers = \
 
 setup(
     name="BetterSockets",
-    version="0.0.1a0",
+    version=__version__,
     description="Better Python sockets and asyncio streams",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
