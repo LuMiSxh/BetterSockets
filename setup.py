@@ -13,7 +13,7 @@ setup(
     name="BetterSockets",
     version="0.0.1a",
     description="Better Python sockets and asyncio streams",
-    long_description=open("README.md").read() + "\n\n\n" + open("CHANGELOG.md").read(),
+    long_description=open("README.md").read(),
     url="https://github.com/Drageast/BetterSockets",
     author="Luca Michael Schmidt",
     author_email="schmidt.lucamichael@gmail.com",

@@ -17,3 +17,9 @@ gains access to the server.
 To start listening on a server-class, you need to call the `listen()` function of that class. 
 For the client to send data, you need to call the `send()` function, just put the data you want
  to send inside the apprentices.
+
+#
+## Changelog
+####
+**0.0.1a (14.07.2021)**
+- Release of this package
