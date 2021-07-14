@@ -14,3 +14,6 @@ you can add a function to process incoming messages by placing a `func=function`
 the corresponding apprentices. Same goes for the client, but it is different for the HubServer, 
 you can put a `identifier=Function` inside it. It is used to determine whether the client 
 gains access to the server.
+To start listening on a server-class, you need to call the `listen()` function of that class. 
+For the client to send data, you need to call the `send()` function, just put the data you want
+ to send inside the apprentices.
