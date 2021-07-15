@@ -1,13 +1,8 @@
 from __future__ import annotations
 from socket import socket
 
-# Importing the different types of Hub_Server
-from BetterSockets.Asyncio.Hub_Server import WebSocket as AsyncHub
-from BetterSockets.Threads.Hub_Server import WebSocket as ThreadHub
-
-# Importing the different types of Process_Server
-from BetterSockets.Asyncio.Process_Server import WebSocket as AsyncSocket
-from BetterSockets.Threads.Process_Server import WebSocket as ThreadSocket
+import BetterSockets.Asyncio as Asyncio
+import BetterSockets.Threads as Threads
 
 
 class ProcessorServer:
@@ -15,10 +10,10 @@ class ProcessorServer:
         self.__type: bool = kwargs.get("is_async", False)
 
         if self.__type is True:
-            self.__Socket = AsyncSocket(**kwargs)
+            self.__Socket = Asyncio.ProcessServer(**kwargs)
 
         elif self.__type is False:
-            self.__Socket = ThreadSocket(**kwargs)
+            self.__Socket = Threads.ProcessServer(**kwargs)
 
     def listen(self):
         self.__Socket.listen()
@@ -29,10 +24,10 @@ class HubServer:
         self.__type: bool = kwargs.get("is_async", False)
 
         if self.__type is True:
-            self.__Socket = AsyncHub(**kwargs)
+            self.__Socket = Asyncio.HubServer(**kwargs)
 
         elif self.__type is False:
-            self.__Socket = ThreadHub(**kwargs)
+            self.__Socket = Threads.HubServer(**kwargs)
 
     def listen(self):
         self.__Socket.listen()

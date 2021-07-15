@@ -21,7 +21,6 @@ setup(
     author_email="schmidt.lucamichael@gmail.com",
     license="MIT",
     classifiers=classifiers,
-    package_dir={"": "BetterSockets"},
-    packages=find_packages(where="BetterSockets"),
+    packages=find_packages(),
     python_requires=">=3.6"
 )
